@@ -18,7 +18,7 @@ Builds a Golang project, incluing all needed files to run the final application.
     - [Solaris](bin/solaris/go-packager)
 - Add to PATH evironment variable
 - Configure *go-packager.json* file in application root
-- Run go-packager 
+- Run **go-packager** in application root
 ``
 go-packager run
 ``

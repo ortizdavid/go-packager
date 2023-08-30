@@ -18,6 +18,7 @@ var fileInfo core.FileInfo
 
 func (builder *AppBuilder) Run(configFile string) {
 	pkgConfig := config.DecodeConfig(configFile)
+	log.Printf("Packaging the application '%s'", pkgConfig.BuildName)
 	builder.copyItems(pkgConfig)
 	builder.buildProject(pkgConfig)
 	builder.zipFolder(pkgConfig)
