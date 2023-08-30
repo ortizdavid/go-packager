@@ -1,6 +1,6 @@
 # Golang Packager
 
-Builds a project, incluing all needed files to run the final application.
+Builds a Golang project, incluing all needed files to run the final application.
 
 
 ## How the go-packager works
@@ -9,8 +9,21 @@ Builds a project, incluing all needed files to run the final application.
 - Builds the application, according to the OS
 - Compress the resulting folder
 
-## Sample of pakager.json
+## Installation
+- Download binary: 
+    - [Windows](bin/windows/go-packager.exe)
+    - [Linux](bin/linux/go-packager)
+    - [MacOS](bin/macos/go-packager)
+    - [FreeBsd](bin/freebsd/go-packager)
+    - [Solaris](bin/solaris/go-packager)
+- Add to PATH evironment variable
+- Configure *go-packager.json* file in application root
+- Run go-packager 
+``
+go-packager run
+``
 
+## Sample of *go-pakager.json* configuration
 
 ```json
 {
@@ -24,12 +37,4 @@ Builds a project, incluing all needed files to run the final application.
         ".env"
     ]
 }
-```
-
-
-
-## Example
-
-```sh
-go-packager run
 ```
