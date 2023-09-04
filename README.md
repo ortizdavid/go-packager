@@ -41,7 +41,7 @@ go-packager run
 
 
 ## Commands
-- *help*: Shows Help for use the tool
-- *check*: Checks if exists the 'packager.json' file and print its content
+- *-help*: Shows Help for use the tool
+- *-examples*: Shows examples
+- *-check*: Checks if exists the 'packager.json' file and print its content
 - *run*: Runs go-packager, reading the 'packager.json' file
-- *examples*: Shows examples
