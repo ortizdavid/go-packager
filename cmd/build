@@ -7,3 +7,5 @@ GOOS=darwin go build -o ../bin/macos/go-packager &&
 GOOS=freebsd go build -o ../bin/freebsd/go-packager &&
 
 GOOS=solaris go build -o ../bin/solaris/go-packager 
+
+
