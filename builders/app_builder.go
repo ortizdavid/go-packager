@@ -18,7 +18,7 @@ var fileInfo core.FileInfo
 
 func (builder *AppBuilder) Run(configFile string) {
 	pkgConfig := config.DecodeConfig(configFile)
-	log.Printf("Packaging the application '%s'", pkgConfig.BuildName)
+	log.Printf("\nPackaging the application '%s'", pkgConfig.BuildName)
 	builder.copyItems(pkgConfig)
 	builder.buildProject(pkgConfig)
 	builder.zipFolder(pkgConfig)
@@ -44,7 +44,7 @@ func (builder *AppBuilder) buildProject(pkgConfig config.PackagerConfig) {
 	outputPath := "-o"
 	outputFile := pkgConfig.BuildTarget +"/"+ pkgConfig.BuildName +"/"+ builder.getOutPutFile(pkgConfig)
 	
-	log.Printf("Building App '%s'", pkgConfig.BuildName)
+	log.Printf("\nBuilding App '%s'", pkgConfig.BuildName)
 	cmd := exec.Command("go", strBuild, outputPath, outputFile)
 	output, err := cmd.Output()
 

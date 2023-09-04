@@ -9,7 +9,8 @@ func PrintHelp() {
 		go-packager <COMMAND>
 
 	COMMAND:
-		-help: Show Help for use the tool
+		-help: Shows Help for use the tool
+		-check: Checks if exists the 'packager.json' file and print its content
 		-run: Runs go-packager, reading the 'packager.json' file
 		-examples: Shows examples
 	`

@@ -35,9 +35,17 @@ func (pkgConfig PackagerConfig) PrintConfigs() {
 	fmt.Println("Build Name: ", pkgConfig.BuildName)
 	fmt.Println("System: ", pkgConfig.System)
 	fmt.Println("Build Target: ", pkgConfig.BuildTarget)
-	fmt.Print("Packaged Items: ")
+	fmt.Println("Packaged Items: ")
 	for _, item := range pkgConfig.PackagedItems {
-		fmt.Printf("\n\t%s", item)
+		fmt.Printf(" - %s\n", item)
 	}
 	fmt.Printf("\n")
 }
+
+func (pkgConfig PackagerConfig) CheckConfig(configFile string) {
+	config := DecodeConfig(configFile)
+	fmt.Println("Showing 'go-packager.json' configurations:")
+	config.PrintConfigs()
+}
+
+
