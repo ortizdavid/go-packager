@@ -5,16 +5,16 @@ import (
 	"log"
 	"os/exec"
 
-	"github.com/ortizdavid/filemanager/core"
+	"github.com/ortizdavid/go-nopain/filemanager"
 	"github.com/ortizdavid/go-packager/config"
 )
 
 type AppBuilder struct {
 }
 
-var zipper core.FileZip
-var fileManager core.FileManager
-var fileInfo core.FileInfo
+var zipper filemanager.FileZip
+var fileManager filemanager.FileManager
+var fileInfo filemanager.FileInfo
 
 func (builder *AppBuilder) Run(configFile string) {
 	pkgConfig := config.DecodeConfig(configFile)
