@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"log"
 	"os/exec"
-
 	"github.com/ortizdavid/go-nopain/filemanager"
 	"github.com/ortizdavid/go-packager/config"
 )
