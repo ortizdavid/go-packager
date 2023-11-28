@@ -15,6 +15,7 @@ var zipper filemanager.FileZip
 var fileManager filemanager.FileManager
 var fileInfo filemanager.FileInfo
 
+
 func (builder *AppBuilder) Run(configFile string) {
 	pkgConfig := config.DecodeConfig(configFile)
 	log.Printf("\nPackaging the application '%s'", pkgConfig.BuildName)
@@ -38,6 +39,7 @@ func (builder *AppBuilder) copyItems(pkgConfig config.PackagerConfig) {
 	}
 }
 
+
 func (builder *AppBuilder) buildProject(pkgConfig config.PackagerConfig) {
 	strBuild := "build"
 	outputPath := "-o"
@@ -53,6 +55,7 @@ func (builder *AppBuilder) buildProject(pkgConfig config.PackagerConfig) {
 	}
 	log.Println("Builded Sucessuly!")
 }
+
 
 func (builder *AppBuilder) zipFolder(pkgConfig config.PackagerConfig) {
 	source := pkgConfig.BuildTarget +"/"+ pkgConfig.BuildName
@@ -75,6 +78,7 @@ func (builder *AppBuilder) removeOldFolder(pkgConfig config.PackagerConfig) {
 	}
 	log.Println("\nRemoved successfuly!")
 }
+
 
 func (builder *AppBuilder) getOutPutFile(pkgConfig config.PackagerConfig) string {
 	buildName := pkgConfig.BuildName

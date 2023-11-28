@@ -2,6 +2,7 @@ package helpers
 
 import "fmt"
 
+
 func PrintHelp() {
 	help := `Tool to Build a Golang project, incluing all needed files to run the final application.
 
@@ -16,6 +17,7 @@ func PrintHelp() {
 	`
 	fmt.Println(help)
 }
+
 
 func PrintExamples() {
 	sample := `packager.json sample:

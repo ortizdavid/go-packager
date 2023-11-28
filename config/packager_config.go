@@ -7,12 +7,14 @@ import (
 	"os"
 )
 
+
 type PackagerConfig struct {
 	BuildName     string   `json:"build_name"`
 	BuildTarget   string   `json:"build_target"`
 	System        string   `json:"system"`
 	PackagedItems []string `json:"packaged_items"`
 }
+
 
 func DecodeConfig(fileName string) PackagerConfig {
 	var config PackagerConfig
@@ -41,6 +43,7 @@ func (pkgConfig PackagerConfig) PrintConfigs() {
 	}
 	fmt.Printf("\n")
 }
+
 
 func (pkgConfig PackagerConfig) CheckConfig(configFile string) {
 	config := DecodeConfig(configFile)
