@@ -1,0 +1,11 @@
+{
+    "build_name": "test-build",
+    "build_target": ".",  
+    "system": "windows",
+    "packaged_items": [
+        "static",
+        "templates",
+        "logs",
+        ".env"
+    ]
+}
